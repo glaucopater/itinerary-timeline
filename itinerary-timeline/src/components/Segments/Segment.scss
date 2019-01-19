@@ -1,0 +1,85 @@
+@import "../../sass/variables.scss";
+
+.segment-container {
+    border-left: 1px solid $black;
+    padding: 3 *$offsetWidth;
+    margin: 3 *$offsetWidth;
+}
+
+.Segment {
+    outline: 1px solid $black;  
+    border: 1px solid transparent;
+    padding: 2 * $offsetWidth;
+    font-size: 1em;
+    appearance: none;
+    outline-color: transparent;
+    color: $white;
+    .ground {  
+        .from {
+            display: block;
+            &:before {
+                content: "C";
+            } 
+        }
+    }
+    &.flight { 
+        background: $lessdarkblue;
+        padding: 0;
+        >.header {
+            border: 1px solid transparent;
+            display: inline;
+            .flight-number {  
+                float: left;
+                border: 1px solid transparent;
+            }  
+            .boarding {  
+                float: right;
+                border: 1px solid transparentk;
+            }   
+        }
+        >.body {
+            border: 1px solid transparent;
+            background: $white;
+            color: $black;
+            text-align: center;
+            font-size: 150%;
+        }
+        >.footer {
+            border: 1px solid transparent;
+            .gate { 
+                display: inline;
+                margin: $offsetWidth;
+            }  
+            .seat {  
+                display: inline;
+                margin: $offsetWidth;
+            } 
+            .on-time {  
+                background: $green; 
+                float: right; 
+            }  
+        }
+    }
+    &.airport {  
+        padding: 0;
+        >.body { 
+            background: $lessdarkblue;
+            color: $black;
+            text-align: center;
+            font-size: 150%;
+        }   
+        >.footer { 
+            text-align: center;
+            background: $lessdarkblue;
+            .busy {  
+                color: $orange; 
+                float: right; 
+            }  
+        }
+    }
+    &.active {
+        background: $darkblue;
+    }
+}
+
+

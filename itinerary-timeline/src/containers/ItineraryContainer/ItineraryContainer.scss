@@ -1,0 +1,7 @@
+@import '../../sass/variables.scss';
+
+.ItineraryContainer { 
+    max-width: $screen-xs-max;
+    margin: 0 auto; 
+    background: $lightgray;
+}
