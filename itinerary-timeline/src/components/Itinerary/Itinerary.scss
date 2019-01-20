@@ -1,6 +1,15 @@
 @import "../../sass/variables.scss";
 
 .Itinerary {
-    outline: 1px solid #000;
-    padding: $offsetWidth;
+    padding: 0 4 * $offsetWidth 0 8 * $offsetWidth;;
+    .from-to {
+        font-size: 34px;
+        margin: 20px 0;
+    }
+    .segment-list {
+        list-style-type: none;
+        margin: 0 0 0 -12px;
+        padding: 0;
+    }
 }
+

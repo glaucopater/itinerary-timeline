@@ -1,6 +1,5 @@
 import React from "react";
 import "./Itinerary.scss";
-import Overview from '../Overview/Overview'; 
 import Segment from '../Segments/Segment';
 
 export default class Itinerary extends React.Component {
@@ -8,12 +7,18 @@ export default class Itinerary extends React.Component {
         super(props);
         this.state = {};
     }
-    render() { 
-        const overview = <Overview origin_iata={this.props.origin_iata} destination_iata={this.props.destination_iata} />; 
+
+    getFromTo(origin,destination){
+        return <h2 className="from-to">{origin} - {destination}</h2>
+    }
+    render() {  
         const segments = this.props.segments.map((seg,key)=>{return <Segment key={key} {...seg}/>});
-        return <div className="Itinerary">
-                {overview} 
-                {segments}
-            </div>
+        const fromTo = this.getFromTo(this.props.origin_iata,this.props.destination_iata);
+        return <section className="Itinerary">
+                {fromTo}
+                <ul className="segment-list">
+                    {segments}
+                </ul>
+            </section>
     }
 }
