@@ -1,14 +1,9 @@
 import React from "react"; 
 import Overview from '../../components/Overview/Overview';
-import Itinerary from '../../components/Itinerary/Itinerary'; 
+import Itinerary from '../../components/Itinerary/Itinerary';  
 import './ItineraryContainer.scss';
 
-
-export default class ItineraryContainer extends React.Component {
-    constructor(props){
-        super(props);
-        this.state= {};
-    }
+export default class ItineraryContainer extends React.Component { 
     render(){ 
         return <div className="ItineraryContainer">
             <Overview />

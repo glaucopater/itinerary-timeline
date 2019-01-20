@@ -2,11 +2,13 @@ import React from "react";
 import Moment from 'react-moment';
 import classnames from 'classnames';
 import "./Segment.scss"; 
+import PropTypes from 'prop-types';
 
 export default class Segment extends React.Component {
     constructor(props){
         super(props);
         this.state= {};
+
     }
 
     getGround(){
@@ -71,4 +73,10 @@ export default class Segment extends React.Component {
             {segment}
         </li>)
     }
+}
+
+Segment.propTypes = { 
+    type: PropTypes.string.isRequired,
+    segment_id: PropTypes.string.isRequired, 
+    departure: PropTypes.string.isRequired
 }
