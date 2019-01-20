@@ -1,18 +1,18 @@
 @import "../../../src/sass/variables.scss";
 
 .Overview {
-    .header {
-        background: $darkblue;
-        color: $white; 
-        padding: $offsetWidth;
-        margin:0;
-        &:before{
-            content: " < ";
-        }
-    }
-    .from-to {
-        padding: $offsetWidth;
-        text-align: center;
+    background-color: darkblue;
+    color: white;
+    margin: 0;
+    padding: 2 * $offsetWidth;
+    font-size: 4 * $offsetWidth;;
+
+    .back {
+        background: none;
+        border: none;
+        outline: none;
+        color: inherit;
+        cursor: pointer;
     }
 }
 

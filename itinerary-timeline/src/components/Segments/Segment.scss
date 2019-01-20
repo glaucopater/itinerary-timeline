@@ -2,84 +2,111 @@
 
 .segment-container {
     border-left: 1px solid $black;
-    padding: 3 *$offsetWidth;
-    margin: 3 *$offsetWidth;
-}
-
-.Segment {
-    outline: 1px solid $black;  
-    border: 1px solid transparent;
-    padding: 2 * $offsetWidth;
-    font-size: 1em;
-    appearance: none;
-    outline-color: transparent;
-    color: $white;
-    .ground {  
-        .from {
-            display: block;
-            &:before {
-                content: "C";
-            } 
-        }
+    padding: 3 * $offsetWidth;;
+    margin: 3 * $offsetWidth;;
+  }
+  
+  .Segment {
+    border-left: 4px solid;
+    padding: 0 12px 10px;
+    position: relative;
+    margin: 0;
+    &::before, &::after {
+      font-family: "FontAwesome";
+      font-size: 18px;
+      left: -2 * $offsetWidth;;
+      position: absolute;
+      top: 0;
     }
-    &.flight { 
-        background: $lessdarkblue;
-        padding: 0;
-        >.header {
-            border: 1px solid transparent;
-            display: inline;
-            .flight-number {  
-                float: left;
-                border: 1px solid transparent;
-            }  
-            .boarding {  
-                float: right;
-                border: 1px solid transparentk;
-            }   
-        }
-        >.body {
-            border: 1px solid transparent;
-            background: $white;
-            color: $black;
-            text-align: center;
-            font-size: 150%;
-        }
-        >.footer {
-            border: 1px solid transparent;
-            .gate { 
-                display: inline;
-                margin: $offsetWidth;
-            }  
-            .seat {  
-                display: inline;
-                margin: $offsetWidth;
-            } 
-            .on-time {  
-                background: $green; 
-                float: right; 
-            }  
-        }
+    &::before {
+      content: "\F0C8";
+      color: $lightgray;
+      font-size: 23px;
+      top: -3px;
+      left: -12px;
     }
-    &.airport {  
-        padding: 0;
-        >.body { 
-            background: $lessdarkblue;
-            color: $black;
-            text-align: center;
-            font-size: 150%;
-        }   
-        >.footer { 
-            text-align: center;
-            background: $lessdarkblue;
-            .busy {  
-                color: $orange; 
-                float: right; 
-            }  
+    &::after {
+      content: "\F10C";
+    }
+    &.active::after {
+      content: "\F111";
+    }
+    > {
+      .info {
+        border: 1px solid;
+        color: $white;
+        margin: $offsetWidth 0 0;
+        padding: 2 * $offsetWidth 2 * $offsetWidth 2 * $offsetWidth 8 * $offsetWidth;
+        position: relative;
+        &::before {
+          font-family: "FontAwesome";
+          font-weight: 4 * $offsetWidth;
+          left: 2 * $offsetWidth;
+          position: absolute;
         }
+        &.ground {
+          background: $darkblue;
+          &::before {
+            content: "\F1B9";
+          }
+        } 
+        &.airport {
+          background: $blue;
+          &::before {
+            content: "\F1AD";
+          }
+          .busy-indicator {
+            color: $orange;
+            font-size: 14px;
+            position: absolute;
+            bottom: 2 * $offsetWidth;
+            right: 2 * $offsetWidth;
+            line-height: 4 * $offsetWidth;
+            vertical-align: top;
+            .fa {
+              font-size: 70%;
+              display: inline-block;
+              line-height: 18px;
+              vertical-align: inherit;
+              padding-right: 4px;
+            }
+          }
+        }
+      }
+      .flight {
+        border: 1px solid;
+        > div {
+          border-top: 1px solid;
+          padding: $offsetWidth;
+        }
+        :first-child {
+          border-top: none;
+        }
+        span {
+          padding: $offsetWidth;
+        }
+        .header {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          background: blue;
+          color: white;
+        }
+        .body {
+          font-size: 150%;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          background: #fff;
+        }
+        .footer {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          .on-time {
+            background-color: lightgreen;
+          }
+        }
+      }
     }
-    &.active {
-        background: $darkblue;
-    }
-}
-
-
+  }
