@@ -22,7 +22,8 @@ export default class Segment extends React.Component {
 
     getAirport(){
         const body = <p className="airport-code">{this.props.origin.value} Airport</p>;
-        const busyStatus = this.props.detail.busyness_index ? <div className="busy-indicator">Busy</div> : null;
+        const busyStatus = this.props.detail.busyness_index ? <span className="busy-indicator">
+        <i className="fa fa-circle"></i>Busy</span> : null;
         const terminal = <p className="terminal">Terminal C</p>;
         const footer = <div className="footer">{terminal}{busyStatus}</div>; 
         return <div className={"info " +(this.props.type).toLowerCase()}>
@@ -33,17 +34,17 @@ export default class Segment extends React.Component {
 
     getFlight(){
         const header = <div className="header">
-            <div className="flight-number">{this.props.detail.flight_number}</div>
-            <div className="boarding"> 
+            <span className="flight-number">{this.props.detail.flight_number}</span>
+            <span className="boarding"> 
                 Boarding <Moment className="timestamp" format="HH:mm">{this.props.detail.boarding*1000}</Moment> 
-            </div>
+            </span>
         </div>;
         const bodySeparator = <span className="fa fa-plane"></span>;
         const body = <div className="body">{this.props.origin.value}{bodySeparator}{this.props.destination.value}</div>;
         const footer = <div className="footer">
-                <div className="gate">Gate {this.props.detail.gate}</div> 
-                <div className="seat">Seat {this.props.detail.seat}</div>
-                <div className="on-time">On Time</div>
+                <span className="gate">Gate {this.props.detail.gate}</span> 
+                <span className="seat">Seat {this.props.detail.seat}</span>
+                <span className="on-time">On Time</span>
             </div>;
         return <div className={(this.props.type).toLowerCase()}>
                 {header}
@@ -78,5 +79,5 @@ export default class Segment extends React.Component {
 Segment.propTypes = { 
     type: PropTypes.string.isRequired,
     segment_id: PropTypes.string.isRequired, 
-    departure: PropTypes.string.isRequired
+    departure: PropTypes.number.isRequired
 }

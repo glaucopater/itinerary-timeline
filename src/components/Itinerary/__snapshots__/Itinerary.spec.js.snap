@@ -7,7 +7,7 @@ ShallowWrapper {
     segments={
       Array [
         Object {
-          "departure": "segments.departure",
+          "departure": 1,
           "segment_id": "segments.segment_id",
           "type": "segments.type",
         },
@@ -37,7 +37,7 @@ ShallowWrapper {
           className="segment-list"
         >
           <Segment
-            departure="segments.departure"
+            departure={1}
             segment_id="segments.segment_id"
             type="segments.type"
           />
@@ -74,7 +74,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Segment
-              departure="segments.departure"
+              departure={1}
               segment_id="segments.segment_id"
               type="segments.type"
             />,
@@ -88,7 +88,7 @@ ShallowWrapper {
             "key": "0",
             "nodeType": "class",
             "props": Object {
-              "departure": "segments.departure",
+              "departure": 1,
               "segment_id": "segments.segment_id",
               "type": "segments.type",
             },
@@ -118,7 +118,7 @@ ShallowWrapper {
             className="segment-list"
           >
             <Segment
-              departure="segments.departure"
+              departure={1}
               segment_id="segments.segment_id"
               type="segments.type"
             />
@@ -155,7 +155,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Segment
-                departure="segments.departure"
+                departure={1}
                 segment_id="segments.segment_id"
                 type="segments.type"
               />,
@@ -169,7 +169,7 @@ ShallowWrapper {
               "key": "0",
               "nodeType": "class",
               "props": Object {
-                "departure": "segments.departure",
+                "departure": 1,
                 "segment_id": "segments.segment_id",
                 "type": "segments.type",
               },

@@ -23,6 +23,6 @@ Itinerary.propTypes = {
     segments: PropTypes.arrayOf(PropTypes.shape({
         type: PropTypes.string.isRequired,
         segment_id: PropTypes.string.isRequired, 
-        departure: PropTypes.string.isRequired
+        departure: PropTypes.number.isRequired
     })).isRequired
 }
