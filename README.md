@@ -1,6 +1,6 @@
 Itinerary Timeline
 ===
-![Itinerary Timeline](/itinerary.jpg)
+![Itinerary Timeline](/itinerary.JPG)
 
 
 Workflow
