@@ -4,7 +4,7 @@ exports[`Segment renders properly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Segment
-    departure="departure"
+    departure={1}
     segment_id="segment_id"
     type="type"
   />,
@@ -42,7 +42,7 @@ ShallowWrapper {
             utc={false}
             withTitle={false}
           >
-            NaN
+            1000
           </t>
         </span>,
         null,
@@ -73,7 +73,7 @@ ShallowWrapper {
             utc={false}
             withTitle={false}
           >
-            NaN
+            1000
           </t>,
           "className": "timestamp",
         },
@@ -85,7 +85,7 @@ ShallowWrapper {
           "props": Object {
             "ago": false,
             "calendar": false,
-            "children": NaN,
+            "children": 1000,
             "decimal": false,
             "element": "time",
             "filter": [Function],
@@ -101,7 +101,7 @@ ShallowWrapper {
             "withTitle": false,
           },
           "ref": null,
-          "rendered": NaN,
+          "rendered": 1000,
           "type": [Function],
         },
         "type": "span",
@@ -137,7 +137,7 @@ ShallowWrapper {
               utc={false}
               withTitle={false}
             >
-              NaN
+              1000
             </t>
           </span>,
           null,
@@ -168,7 +168,7 @@ ShallowWrapper {
               utc={false}
               withTitle={false}
             >
-              NaN
+              1000
             </t>,
             "className": "timestamp",
           },
@@ -180,7 +180,7 @@ ShallowWrapper {
             "props": Object {
               "ago": false,
               "calendar": false,
-              "children": NaN,
+              "children": 1000,
               "decimal": false,
               "element": "time",
               "filter": [Function],
@@ -196,7 +196,7 @@ ShallowWrapper {
               "withTitle": false,
             },
             "ref": null,
-            "rendered": NaN,
+            "rendered": 1000,
             "type": [Function],
           },
           "type": "span",
